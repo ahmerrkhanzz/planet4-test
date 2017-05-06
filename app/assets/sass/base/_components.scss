@@ -1,0 +1,211 @@
+/*badges*/
+.badge {
+    position: absolute;
+    top: -5px;
+    font-weight: 300;
+    padding: 3px 6px;
+    font-size: 10px;
+    margin-left: -8px;
+    &-blue{
+		background-color: $default-blue;
+    }
+    &-green{
+		background-color: $default-green;
+    }
+    &-yellow{
+		background-color: $default-yellow;
+    }
+}
+
+/*buttons*/
+.btn{
+  border-radius: 0px;
+  transition: all 0.5s ease;
+  &-danger{
+    background: $default-red;
+    border-color: $default-red;
+    &:hover, &:focus, &:active, &:active:focus{
+      background: $dark-red;
+      border-color: $dark-red;
+      outline: 0;
+    }
+  }
+  &-success{
+    background: $default-green;
+    border-color: $default-green;
+    &:hover, &:focus, &:active, &:active:focus{
+      background: $dark-green;
+      border-color: $dark-green;
+      outline: 0;
+    }
+    &--crystal{
+      @extend .btn-success;
+      background: transparent;
+      border-color: $white;
+      padding: 10px 35px;
+      font-weight: 100px;
+    }
+    &--crystalInverse{
+      @extend .btn-success;
+      &:hover, &:focus, &:active, &:active:focus{
+        background: $white;
+        border-color: $dark-green;
+        outline: 0;
+        color: $dark-green;
+      }
+    }
+  }
+  &-primary{
+    background: $default-blue;
+    border-color: $default-blue;
+    &:hover, &:focus, &:active, &:active:focus{
+      background: $dark-blue;
+      border-color: $dark-blue;
+      outline: 0;
+    }
+    &--crystal{
+      @extend .btn-primary;
+      background: transparent;
+      border-color: $white;
+      padding: 10px 35px;
+      font-weight: 100;
+    }
+    &--crystalInverse{
+      @extend .btn-primary;
+      &:hover, &:focus, &:active, &:active:focus{
+        background: $white;
+        border-color: $default-blue;
+        outline: 0;
+        color: $default-blue;
+      }
+    }
+  }
+  &-warning{
+    background: $default-yellow;
+    border-color: $default-yellow;
+    &:hover, &:focus, &:active, &:active:focus{
+      background: $dark-yellow;
+      border-color: $dark-yellow;
+      outline: 0;
+    }
+  }
+  &-default{
+    background: $primary-grey;
+    border-color: $primary-grey;
+    &:hover, &:focus, &:active, &:active:focus{
+      background: $grey-dark;
+      border-color: $grey-dark;
+      outline: 0;
+    }
+  }
+}
+
+// block-main
+.block{
+  &-main{
+    background: #fff;
+    box-shadow: 0 0px 3px transparentize($black, 0.88);
+  }
+  &-padding{
+    padding:15px;
+  }
+  &-minipadding{
+    padding:10px;
+  }
+  &-heading{
+    font-size: $font-size-base + 2;
+    font-weight: 300;
+    padding: 10px;
+    background: $default-grey;
+    color: $font-color-base;
+  }
+  &-cover{
+    height: 100px;
+    padding: 15px;
+    position: relative;
+    a{
+      display: inline-block;
+      right: 15px;
+      position: absolute;
+      color: #fff;
+      bottom: 10px;
+    }
+  }
+  &-title{
+    position: absolute;
+    bottom: 10px;
+    color: #fff;
+    font-size: $font-size-large;
+    font-weight: 100;
+  }
+}
+.overlay{
+  &-black50{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: transparentize($black, 0.50);
+  }
+}
+
+/* Modals */
+.modal-content{
+  border-radius: 0px;
+  h2{
+    font-weight: lighter;
+    margin-bottom: 15px;
+    margin-top: 5px;
+  }
+  .btn-cross{
+    right: 15px;
+    position: absolute;
+    top: 10px;
+    font-size: $font-size-large + 9;
+  }
+  .or{
+    color: $dark-grey;
+    display: block;
+    font-size: $font-size-large + 9;
+    font-weight: lighter;
+    margin: 0px 10px 20px;
+    position: relative;
+    text-align: center;
+    &:before{
+      background-color: $light-grey;
+      content: "";
+      height: 1px;
+      left: -10px;
+      right: -10px;
+      position: absolute;
+      top: 56%;
+    }
+    &:after{
+      background-color: #fff;
+      content: attr(data-text);
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      line-height: 50px;
+      position: relative;
+    }
+  }
+  .control{
+    font-size: $font-size-base + 1;
+  }
+  .forget-password a{
+    float: right;
+    font-size: $font-size-base + 1;
+    color: $default-blue;
+    &:hover{
+      color: $dark-blue;
+    }
+  }
+}
+.modal-md{
+  width: 500px;
+  .modal-body{
+    padding: 20px;
+  }
+}

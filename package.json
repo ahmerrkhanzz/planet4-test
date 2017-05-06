@@ -1,0 +1,32 @@
+{
+  "name": "gmail-clone",
+  "version": "1.0.0",
+  "description": "gmail clone",
+  "main": " index.html",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "wiredep": "^4.0.0"
+  },
+  "devDependencies": {
+    "angular-mocks": "^1.6.1",
+    "browser-sync": "^2.18.2",
+    "gulp": "^3.9.1",
+    "gulp-inject": "^4.1.0",
+    "gulp-jslint": "^1.0.10",
+    "gulp-sass": "^2.3.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "gulp watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahmerrkhanzz/planet4-test.git"
+  },
+  "author": "Ahmer Khan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ahmerrkhanzz/planet4-test/issues"
+  },
+  "homepage": "https://github.com/ahmerrkhanzz/planet4-test#readme"
+}

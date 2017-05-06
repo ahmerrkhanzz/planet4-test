@@ -1,0 +1,17 @@
+<header class="main-header">
+  <a class="main-header__logo" href="javascript:;"></a> <span class="main-header__description">Ask awesomely</span>
+    <nav class="top-nav"> <a href="javascript:;" class="top-nav__signup js-top-nav__signup" data-gtm-event="key_text_link"> Get started</a>      
+    <a href="javascript:;" class="top-nav__login" data-gtm-event="key_text_link"> Log in    </a>
+      <a class="top-nav__menu" href="javascript:;"></a>
+    </nav>
+</header>
+
+<div class="examples__menu">
+  <nav class="sticky-menu">
+    <ul class="sticky-menu__list">
+      <li class="sticky-menu__item item--example-information is-active" ng-repeat="item in vm.menus">
+        <a href="javascript:;"> <img ng-src="{{item.icon}}" alt="" class="sticky-menu__icon"> <span class="sticky-menu__title">{{item.name}}</span> </a>
+      </li>
+    </ul>
+  </nav>
+</div>

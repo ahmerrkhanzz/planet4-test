@@ -1,0 +1,58 @@
+<navigation></navigation>
+<div class="container">
+  <section class="examples__content">
+    <form action="" novalidate name="quizForm">
+      <div ng-repeat="data in vm.res">
+        <div class="example">
+          <img ng-src="{{data.icon}}" alt="Information" class="example__icon">
+          <h2 class="example__title example__title--sub">{{data.title}}</h2>
+          <h2 class="example__title">{{data.title}}</h2>
+          <div class="example__items">
+            <div class="thumbnails">
+              <div class="thumbnails__item" ng-repeat="item in data.thumbs">
+                <div class="thumbnail thumbnail--legacy">
+                  <div class="control-group">
+                    <label class="control control--checkbox">
+                      <input type="checkbox" ng-model="item.selected" ng-click="vm.updateSelection($index, data.thumbs)"/>
+                      <div class="control__indicator"></div>
+                    </label>
+                  </div>
+                  <a>
+                    <img ng-src="{{item.img}}" alt="">
+                    <div ng-if="item.name">{{item.name}}</div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form-group" style="margin-top: 20px;">
+        <div class="col-sm-4"></div>
+        <div class="col-md-4 text-center">
+          <button class="btn btn-primary btn-md btn-block" type="button" ng-click="vm.submit(vm.res)">Submit</button>
+        </div>
+        <div class="col-sm-4"></div>
+      </div>
+    </form>
+  </section>
+</div>
+<section ng-if="vm.text">
+  <footer>
+    <div class="hello-typeform container">
+      <div class="col-sm-4"></div>
+      <div class="col-sm-4">
+        <p class="hello-typeform__text">You got. <b>{{vm.text}}.</b></p>
+        <img src="https://img.buzzfeed.com/buzzfeed-static/static/2014-10/16/9/tmp/webdr05/1cf115c45b01393c47f3dedc103dc044-0.jpg" alt="">
+        <p class="text-justify">
+          You are determined, stoic and you can withstand almost anything that comes your way. But not climate change. The Arctic is
+          getting warmer. And as the ice melts, oil companies are rushing to exploit newly available fossil fuel deposits,
+          further contributing to the problem. This needs to stop. For the entire planet’s sake.
+        </p>
+      </div>
+      <div class="col-sm-4"></div>
+    </div>
+    <div class="copyright"> <img src="https://d2xy5qvxyo4wme.cloudfront.net/dist/img/common/map-pointer.svg?v=1109" alt="Map Pointer"> <span class="copyright__name"> <b>Typeform|</b> Bac de Roda 163, Barcelona </span>      <span class="copyright__brand">© Typeform</span></div>
+  </footer>
+</section>
+</div>
